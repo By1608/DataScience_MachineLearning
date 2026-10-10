@@ -155,17 +155,19 @@ print(
     colored("\nLet those who worship evil's might, beware my power, Green Lantern's light.", "green", attrs=["bold"])
 )
 
-by = "Bai Yu"
-zyl = "Zhu Yilong"
-
-print(
-    f"{colored(by, 'black', on_color='on_white', attrs=['bold'])} and "
-    f"{colored(zyl, 'white', on_color='on_red', attrs=['bold'])} "
-    "are the best couple in the world!"
-)
-
 print(
     f"{colored("Zhu", 'white', on_color='on_red', attrs=['bold'])}"
     f"{colored("Bai", 'black', on_color='on_white', attrs=['bold'])} "
     "is my favorite ship!"
+    , end = ".\n"
 )
+
+by = "Bai Yu"
+zyl = "Zhu Yilong"
+otp= by + " and " + zyl + " are the best couple in the world!"
+
+by_colored = colored(by, 'black', on_color='on_white', attrs=['bold'])
+zyl_colored = colored(zyl, 'white', on_color='on_red', attrs=['bold'])
+
+print(otp.replace(by, by_colored).replace(zyl, zyl_colored), end = ".\n")   
+
