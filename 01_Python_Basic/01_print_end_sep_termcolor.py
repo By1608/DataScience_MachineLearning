@@ -157,9 +157,15 @@ print(
 
 by = "Bai Yu"
 zyl = "Zhu Yilong"
-otp = by + " and " + zyl + " are the best couple in the world!"
 
-by_colored = colored(by, "black", on_color="on_white", attrs=["bold"])
-zyl_colored = colored(zyl, "white", on_color="on_red", attrs=["bold"])
+print(
+    f"{colored(by, 'black', on_color='on_white', attrs=['bold'])} and "
+    f"{colored(zyl, 'white', on_color='on_red', attrs=['bold'])} "
+    "are the best couple in the world!"
+)
 
-print(otp.replace(by, by_colored).replace(zyl, zyl_colored))
+print(
+    f"{colored("Zhu", 'white', on_color='on_red', attrs=['bold'])}"
+    f"{colored("Bai", 'black', on_color='on_white', attrs=['bold'])} "
+    "is my favorite ship!"
+)
