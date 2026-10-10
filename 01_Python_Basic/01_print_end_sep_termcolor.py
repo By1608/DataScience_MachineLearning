@@ -9,6 +9,7 @@
 print("Hello world!")
 print("Bai Yu and Zhu Yilong are the best couple in the world!")
 print('Hello world!')
+print("ZhuBai is my favorite ship!")
 
 ##----------------------------------##
 ## Multiple-line print() [METHOD 1] ##
