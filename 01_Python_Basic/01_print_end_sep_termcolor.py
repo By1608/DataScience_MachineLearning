@@ -8,6 +8,7 @@
 
 print("Bai Yu and Zhu Yilong are the best couple in the world!")
 print("ZhuBai is my OTP!")
+print("Qian Hong Chu is the last king of Wuyue Kingdom in the Five Dynasties and Ten Kingdoms period.")
 
 ##----------------------------------##
 ## Multiple-line print() [METHOD 1] ##
