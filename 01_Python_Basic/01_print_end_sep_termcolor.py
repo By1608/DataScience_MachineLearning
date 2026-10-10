@@ -101,7 +101,7 @@ from termcolor import colored, cprint
 colored_text = colored(
     text="This text is so colorful!!!",
     color="light_cyan",          # color of the text
-    on_color="on_light_red",     # color of the highlight background
+    on_color="on_light_green",     # color of the highlight background
     attrs=["bold", "underline"]  # LIST of text's attributes like "bold", "underline", ... (MUST be a LIST)
 )
 
@@ -119,7 +119,7 @@ print(colored_text)
 
 # So when you want to use colors that are not in the supported list, go search for their RGB values and parse it here like below
 
-text_rgb = (200, 150, 25)
+text_rgb = (0, 0, 255)
 
 colored_text = colored(
     text="Which color does this RGB tuple stand for?",
@@ -142,7 +142,7 @@ Let those who worship evil's might, beware my power, Green Lantern's light.
 cprint(
     text=green_lantern_oath,
     color="black",
-    on_color=(1,95,64),
+    on_color=(224,255,255),
     attrs=['bold']
 )
 
@@ -154,3 +154,12 @@ print(
     colored("In brightest day, in blackest night, no evil shall escape my sight.", "green", attrs=["bold"]),
     colored("\nLet those who worship evil's might, beware my power, Green Lantern's light.", "green", attrs=["bold"])
 )
+
+by = "Bai Yu"
+zyl = "Zhu Yilong"
+otp = by + " and " + zyl + " are the best couple in the world!"
+
+by_colored = colored(by, "black", on_color="on_white", attrs=["bold"])
+zyl_colored = colored(zyl, "white", on_color="on_red", attrs=["bold"])
+
+print(otp.replace(by, by_colored).replace(zyl, zyl_colored))
