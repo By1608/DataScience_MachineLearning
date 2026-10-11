@@ -3,22 +3,22 @@
 # When you define a variable in Python, you must avoid using Python keywords
 # Python keywords: https://www.w3schools.com/python/python_ref_keywords.asp
 
-salary = 5000 # integer (số nguyên)
-salary_coefficient = 1.475 # float (số thực, dấu phẩy động)
+salary = 10000 # integer (số nguyên)
+salary_coefficient = 4.0816 # float (số thực, dấu phẩy động)
 single = True # kiểu luận lý boolean (True/False)
-full_name = "Tran Ngoc Dung" # character / string
-job = 'engineer'
+full_name = "Bai Yu" # character / string
+job = 'Actor'
 
 ##-----------------------------------------------------##
 
 company_info ='''
-Company ABC
-Location: 123xyz
+Company Yixin Entertainment
+Location: 416 Beijing
 '''
 
 print(company_info)
-# Company ABC
-# Location: 123xyz
+# Company Yixin Entertainment
+# Location: 416 Beijing
 
 ##-----------------------------------------------------##
 
@@ -30,22 +30,19 @@ print(x, y, z)
 # GLOBAL VARIABLES vs LOCAL VARIABLES
 # ==============================================================================================
 
-student_name = 'An' # Global variable, always exists after being defined, independent from For and While loops, or Function
-
-def display_information_1():
-    print(f'1 - Student name (global variable): {student_name}')
+student_name = 'Zhu Yilong' # Global variable, always exists after being defined, independent from For and While loops, or Function
 
 def display_information_2():
-    last_name = 'Chan'
-    first_name = 'Jackie' # Local variable, only persists when the function is executed, will be erased after the execution
+    last_name = 'Zhu'
+    first_name = 'Siyu'
     print(f'2 - Student name (local variable): {first_name} {last_name}')
 
 def display_information_3():
     global last_name2 # Define last_name2 as global. Using this way, although the variable is defined inside a function, it is still a global variable
-    last_name2 = 'Musk ' # hence, it still persists after the execution of the function
+    last_name2 = 'Zhu ' # hence, it still persists after the execution of the function
 
     global first_name2
-    first_name2 = 'Elon'
+    first_name2 = 'Siyu'
 
 # ==============================================================================================
 # function calls and outputs
