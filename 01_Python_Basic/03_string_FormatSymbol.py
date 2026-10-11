@@ -1,6 +1,6 @@
-salary = 5000 # integer (số nguyên)
-salary_coefficient = 1.475 # float (số thực)
-full_name = "Tran Ngoc Dung" # character / string
+salary = 10000 # integer (số nguyên)
+salary_coefficient = 4.0816 # float (số thực)
+full_name = "Bai Yu" # character / string
 
 print("-" * 50)
 
@@ -10,48 +10,48 @@ print("-" * 50)
 
 strTT1 = "Full name: " + full_name + "\nSalary: " + str(salary)
 print(strTT1)
-# Full name: Tran Ngoc Dung
-# Salary: 5000
+# Full name: Bai Yu
+# Salary: 10000
 
 strTT2 = "Full name: %s \nSalary: %i \nSalary coefficient: %f"%(full_name, salary, salary_coefficient)
 print(strTT2)
-# Full name: Tran Ngoc Dung
-# Salary: 5000
-# Salary coefficient: 1.475000
+# Full name: Bai Yu
+# Salary: 10000
+# Salary coefficient: 4.081600
 
 strTT3 = "Full name: %s \nSalary: %i \nSalary coefficient: %.2f"%(full_name, salary, salary_coefficient)
 print(strTT3)
-# Full name: Tran Ngoc Dung
-# Salary: 5000
-# Salary coefficient: 1.48
+# Full name: Bai Yu
+# Salary: 10000
+# Salary coefficient: 4.08
 
 # ==============================================================================================
 # 2. Format Symbol 2 (new style)
 # ==============================================================================================
 
-str1 = f'Full name: {full_name}\n Salary: {salary}\n Salary coefficient: {salary_coefficient}'
+str1 = f'Full name: {full_name}\nSalary: {salary}\nSalary coefficient: {salary_coefficient}'
 print(str1)
-# Full name: Tran Ngoc Dung
-#  Salary: 5000
-#  Salary coefficient: 1.475
+# Full name: Bai Yu
+#  Salary: 10000
+#  Salary coefficient: 4.0816
 
 # Add comma "," as a thousand separator for salary, and round the salary_coefficient up to 2 decimal numbers
-str2 = f'Full name: {full_name}\n Salary: {salary:,} VND\n Salary coefficient: {salary_coefficient:.2f}'
+str2 = f'Full name: {full_name}\nSalary: {salary:,} CNY\nSalary coefficient: {salary_coefficient:.2f}'
 print(str2)
-# Full name: Tran Ngoc Dung
-#  Salary: 5,000 VND
-#  Salary coefficient: 1.48
+# Full name: Bai Yu
+#  Salary: 10,000 CNY   
+#  Salary coefficient: 4.08
 
 # Add comma "," as a thousand separator for salary, and round the salary up to 2 decimal numbers
-str3 = f'Full name: {full_name}\n Salary: {salary:,.2f} VND\n Salary coefficient: {salary_coefficient}'
+str3 = f'Full name: {full_name}\nSalary: {salary:,.2f} CNY\nSalary coefficient: {salary_coefficient}'
 print(str3)
-# Full name: Tran Ngoc Dung
-#  Salary: 5,000.00 VND
-#  Salary coefficient: 1.475
+# Full name: Bai Yu
+#  Salary: 10,000.00 CNY
+#  Salary coefficient: 4.0816
 
 # Use ``.ne`` for scientific notation
-str4 = f'Full name: {full_name}\n Salary: {salary:.2e} VND\n Salary coefficient: {salary_coefficient:.2e}'
+str4 = f'Full name: {full_name}\nSalary: {salary:.2e} CNY\nSalary coefficient: {salary_coefficient:.2e}'
 print(str4)
-# Full name: Tran Ngoc Dung
-#  Salary: 5.00e+03 VND
-#  Salary coefficient: 1.48e+00
+# Full name: Bai Yu
+#  Salary: 1.00e+04 CNY
+#  Salary coefficient: 4.08e+00
