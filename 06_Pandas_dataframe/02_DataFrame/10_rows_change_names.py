@@ -15,7 +15,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-data_dir = Path("/home").rglob("*/DataScience_MachineLearning/data")
+data_dir = Path.home().rglob("*/DataScience_MachineLearning/data")
 data_dir = next(data_dir)
 
 df_lifexp = pd.read_csv(data_dir/"life_expectancy.csv")
@@ -89,7 +89,7 @@ df_new_idx = df_emp.copy()
 new_indices = [f'row_{i+1}' for i in range(df_emp.shape[0])]
 
 # Change row names
-df_new_idx = df_new_idx.set_axis(new_indices, axis=0, copy=True)
+df_new_idx = df_new_idx.set_axis(new_indices, axis=0)
 
 print(df_new_idx.head(3))
 #        id      name  salary  start_date        dept

@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pandas as pd
 
-data_dir = Path("/home").rglob("*/DataScience_MachineLearning/data")
+data_dir = Path.home().rglob("*/DataScience_MachineLearning/data")
 data_dir = next(data_dir)
 
 df_emp = pd.read_csv(data_dir/"emp.csv")
@@ -28,7 +28,6 @@ print(df_emp)
 df_indexed = df_emp.set_axis(
     labels=[f"row_{i}" for i in df_emp["id"]],
     axis=0,
-    copy=True
 )
 print(df_indexed)
 #        id      name  salary  start_date        dept

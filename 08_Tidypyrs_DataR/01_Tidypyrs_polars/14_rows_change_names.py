@@ -13,7 +13,7 @@ import tidypyrs as tp
 from tidypyrs import f
 
 tp.Config(tbl_width_chars=120)
-data_dir = next(Path("/home").glob("**/DataScience*/data"))
+data_dir = next(Path.home().glob("**/DataScience*/data"))
 
 tl_emp = tp.scan_csv(data_dir/"emp.csv").drop("id")
 print(tl_emp.collect())
@@ -89,8 +89,8 @@ print(
     tl_pokemon
     .row_index(name="id", offset=1)
     .mutate(
-        id = (tp.lit("pkm") + f("id").cast(tp.String).str.zfill(f("id").max().log10().ceil().cast(tp.Int64)))
-        # (tp.lit("pkm") + f("id").cast(tp.String).str.zfill(f("id").max().log10().ceil().cast(tp.Int64))).alias("id),
+        id = (tp.lit("pkm") + f("id").cast(tp.String).str.zfill(f("id").max().cast(tp.String).str.len_chars()))
+        # (tp.lit("pkm") + f("id").cast(tp.String).str.zfill(f("id").max().cast(tp.String).str.len_chars())).alias("id),
     )
     .collect()
 )

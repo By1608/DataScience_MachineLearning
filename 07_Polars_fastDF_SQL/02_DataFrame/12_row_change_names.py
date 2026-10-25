@@ -14,7 +14,7 @@ import polars as pl
 from polars import col as c
 
 pl.Config.set_tbl_width_chars(120)
-data_dir = next(Path("/home").glob("**/DataScience*/data"))
+data_dir = next(Path.home().glob("**/DataScience*/data"))
 
 lf_emp = pl.scan_csv(data_dir/"emp.csv").drop("id")
 print(lf_emp.collect())
@@ -94,8 +94,8 @@ print(
     lf_pokemon
     .with_row_index(name="id", offset=1)
     .with_columns(
-        id = (pl.lit("pkm") + c("id").cast(pl.String).str.zfill(c("id").max().log10().ceil().cast(pl.Int64)))
-        # (pl.lit("pkm") + c("id").cast(pl.String).str.zfill(c("id").max().log10().ceil().cast(pl.Int64))).alias("id")
+        id = (pl.lit("pkm") + c("id").cast(pl.String).str.zfill(c("id").max().cast(pl.String).str.len_chars()))
+        # (pl.lit("pkm") + c("id").cast(pl.String).str.zfill(c("id").max().cast(pl.String).str.len_chars())).alias("id")
     )
     .collect()
 )
